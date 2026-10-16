@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+</head>
+
+    <!-- CSS untuk mengatur tampilan halaman -->
+<style>
+        /* Tampilan dasar halaman */
+    body { font-family: Arial; background: #f3f8ff; margin: 20px; color:#222 }
+        /* Judul utama */
+    h1 { color: #2059ad; text-align: center; }
+        /* Kotak form */
+    .form-box { background: white; border: 1px solid #d0dbe8; padding: 15px; margin-bottom: 30px; }
+        /* jarak antarbagian form */
+    .form-group { margin-bottom: 10px; }
+        /* input, pilihan, dan alamat */
+    input[type="text"],
+    input[type="email"],
+    select, textarea { padding: 5px; border: 1px solid #bfcbd9; } 
+        /* tombol */
+    button { background-color: #2059ad; color: white; padding: 6px 12px; border: none; cursor: pointer; }
+        /* Mengatur judul tabel */
+    .judul-tabel { font-size: 22px; text-align: center; color: #2059ad; margin-top: 20px; }
+        /* Mengatur ukuran dan garis tabel */
+    table { border-collapse: collapse; width: 100%; background: white; }
+        /* Header table */
+    th { background: #2059ad; color: white; padding: 6px; }
+        /* isi tabel */            
+    td { border: 1px solid #d0dbe8; padding: 6px; }
+
+    /* warna baris selang-seling */
+    tbody tr:nth-child(even) { background-color: #e5eefb; }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Judul halaman -->
+    <h1>Data Mahasiswa</h1>
+
+    <!-- Form input mahasiswa -->
+    <div class="form-box">
+        <form>
+            <div class="form-group">
+                <label>Nama:</label><br>
+                <input type="text" name="nama" required>
+        </div>
+
+            <div class="form-group">
+                <label>Email:</label><br>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                Jenis Kelamin:
+                <input type="radio" name="jk" value="L" required> Laki-laki
+                <input type="radio" name="jk" value="P"> Perempuan
+            </div>
+
+            <div class="form-group">
+                Hobi:
+                <input type="checkbox" name="hobi" value="Membaca"> Membaca
+                <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                <input type="checkbox" name="hobi" value="Coding"> Coding
+            </div>
+
+            <div class="form-group">
+                <label>Prodi:</label><br>
+                <select name="prodi">
+                    <option>Teknologi Informasi</option>
+                    <option>Informatika</option>
+                    <option>Sistem Informasi</option>
+                </select>
+            </div>
+
+        <div class="form-group">
+            <label>Alamat:</label><br>
+            <textarea name="alamat" rows="3" cols="30"></textarea>
+        </div>
+
+    
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </form>
+</div>
+
+    <!-- Judul tabel data mahasiswa -->
+     <h2 class="judul-tabel">Daftar  Mahasiswa</h2>
+
+     <!-- Tabel data mahasiswa -->
+     <table> 
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Prodi</th>
+                <th>IPK</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>252520102</td>
+                <td>Meila Bunga Hendrawan</td>
+                <td>Psikologi</td>
+                <td>3.92</td>
+            </tr>
+
+            <tr>
+                <td>252520099</td>
+                <td>Retno Palupi</td>
+                <td>Akutansi</td>
+                <td>3.99</td>
+            </tr>
+
+            <tr>
+                <td>252520023</td>
+                <td>Arini Tria Melani</td>
+                <td>Pendidikan Ekonomi</td>
+                <td>3.93</td>
+            </tr>
+
+            <tr>
+                <td>252520060</td>
+                <td>Malika Alya Dafista</td>
+                <td>Sastra Mandarin</td>
+                <td>3.97</td>
+            </tr>
+
+            <tr>
+                <td>252520074</td>
+                <td>Devi Wiko Astriana</td>
+                <td>Desain Komunikasi Visual</td>
+                <td>3.95</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
